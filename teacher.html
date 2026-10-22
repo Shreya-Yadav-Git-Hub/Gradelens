@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Dashboard | GradeLens</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="teacher-portal">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="teacher-sidebar">
+
+        <div class="teacher-brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>GradeLens</h2>
+                <span>Faculty Portal</span>
+            </div>
+
+        </div>
+
+
+        <nav class="teacher-nav">
+
+            <a href="teacher.html" class="teacher-nav-item active">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="teacher-students.html" class="teacher-nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="teacher-marks.html" class="teacher-nav-item">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Marks</span>
+            </a>
+
+            <a href="teacher-attendance.html" class="teacher-nav-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="teacher-analytics.html" class="teacher-nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Performance Analytics</span>
+            </a>
+
+            <a href="teacher-feedback.html" class="teacher-nav-item">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>Feedback & Remarks</span>
+            </a>
+
+            <a href="teacher-settings.html" class="teacher-nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <p>Teach with Insight</p>
+            <span>Lead with Impact</span>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="teacher-main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="teacher-topbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search students..."
+                >
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="dark-mode-btn" id="darkModeBtn">
+
+                    <i
+                        class="fa-regular fa-moon"
+                        id="themeIcon"
+                    ></i>
+
+                    <span id="themeLabel">
+                        Dark Mode
+                    </span>
+
+                </button>
+
+
+                <button class="notification-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+
+                <div class="teacher-profile">
+
+                    <div class="profile-avatar">
+                        AS
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Arjun Sharma
+                        </strong>
+
+                        <span>
+                            Computer Engineering
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="teacher-dashboard">
+
+
+            <!-- Heading -->
+
+            <div class="dashboard-heading">
+
+                <div>
+
+                    <h1>
+                        Welcome back, Prof. Arjun
+                    </h1>
+
+                    <p>
+                        Here's an overview of your students' academic performance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= STAT CARDS ================= -->
+
+            <div class="teacher-stat-cards">
+
+
+                <!-- Students -->
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon purple">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Students
+                        </span>
+
+                        <h3>
+                            45
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Subjects -->
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon teal">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Active Subjects
+                        </span>
+
+                        <h3>
+                            5
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Average -->
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon pink">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Class Average
+                        </span>
+
+                        <h3>
+                            78.6%
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Attendance -->
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon orange">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Average Attendance
+                        </span>
+
+                        <h3>
+                            91.2%
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= ANALYTICS ================= -->
+
+            <div class="teacher-analytics">
+
+
+                <!-- SUBJECT PERFORMANCE -->
+
+                <div class="analytics-card">
+
+                    <h3>
+                        Subject Performance
+                    </h3>
+
+                    <p>
+                        Average percentage across your curriculum
+                    </p>
+
+
+                    <div class="chart-container">
+
+                        <canvas
+                            id="performanceChartCanvas">
+                        </canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ATTENDANCE -->
+
+                <div class="analytics-card">
+
+                    <h3>
+                        Attendance Overview
+                    </h3>
+
+                    <p>
+                        Overall attendance distribution
+                    </p>
+
+
+                    <div class="chart-container">
+
+                        <canvas
+                            id="attendanceChartCanvas">
+                        </canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= RECENT ACTIVITY ================= -->
+
+            <div class="recent-activity">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h3>
+                            Recent Activity
+                        </h3>
+
+                        <p>
+                            Latest updates from your classes
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Activity 1 -->
+
+                <div class="activity-item">
+
+                    <div class="activity-badge purple">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            Marks updated
+                        </strong>
+
+                        <span>
+                            ISE-1 marks updated for DBMS
+                        </span>
+
+                    </div>
+
+                    <div class="activity-time">
+                        10 minutes ago
+                    </div>
+
+                </div>
+
+
+
+                <!-- Activity 2 -->
+
+                <div class="activity-item">
+
+                    <div class="activity-badge teal">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            Attendance recorded
+                        </strong>
+
+                        <span>
+                            Attendance updated for DLDCA
+                        </span>
+
+                    </div>
+
+                    <div class="activity-time">
+                        1 hour ago
+                    </div>
+
+                </div>
+
+
+
+                <!-- Activity 3 -->
+
+                <div class="activity-item">
+
+                    <div class="activity-badge pink">
+
+                        <i class="fa-solid fa-comment"></i>
+
+                    </div>
+
+                    <div class="activity-content">
+
+                        <strong>
+                            Feedback added
+                        </strong>
+
+                        <span>
+                            Feedback added for student performance
+                        </span>
+
+                    </div>
+
+                    <div class="activity-time">
+                        Yesterday
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

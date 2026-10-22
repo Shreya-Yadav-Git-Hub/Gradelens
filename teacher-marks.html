@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marks | GradeLens</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="teacher-portal">
+
+    <!-- SIDEBAR -->
+    <aside class="teacher-sidebar">
+
+        <div class="teacher-brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>GradeLens</h2>
+                <span>Faculty Portal</span>
+            </div>
+        </div>
+
+        <nav class="teacher-nav">
+
+            <a href="teacher.html" class="teacher-nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="teacher-students.html" class="teacher-nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="teacher-marks.html" class="teacher-nav-item active">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Marks</span>
+            </a>
+
+            <a href="teacher-attendance.html" class="teacher-nav-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="teacher-analytics.html" class="teacher-nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Performance Analytics</span>
+            </a>
+
+            <a href="teacher-feedback.html" class="teacher-nav-item">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>Feedback & Remarks</span>
+            </a>
+
+            <a href="teacher-settings.html" class="teacher-nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Teach with Insight</p>
+            <span>Lead with Impact</span>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="teacher-main">
+
+        <!-- TOPBAR -->
+        <header class="teacher-topbar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search students...">
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="dark-mode-btn" id="darkModeBtn">
+                    <i class="fa-regular fa-moon" id="themeIcon"></i>
+                    <span id="themeLabel">Dark Mode</span>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <div class="teacher-profile">
+                    <div class="profile-avatar">AS</div>
+
+                    <div>
+                        <strong>Arjun Sharma</strong>
+                        <span>Computer Engineering</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- MARKS -->
+        <section class="teacher-dashboard marks-page">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Marks</h1>
+                    <p>Manage and review student academic performance</p>
+                </div>
+
+                <button class="primary-action-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Marks
+                </button>
+
+            </div>
+
+
+            <!-- FILTERS -->
+            <div class="marks-filters">
+
+                <div class="marks-filter">
+                    <label>Subject</label>
+
+                    <select id="marksSubject">
+                        <option value="all">All Subjects</option>
+                        <option value="UHV-II">UHV-II</option>
+                        <option value="Maths-III">Maths-III</option>
+                        <option value="DLDCA">DLDCA</option>
+                        <option value="DBMS">DBMS</option>
+                        <option value="DSUJ">DSUJ</option>
+                    </select>
+                </div>
+
+
+                <div class="marks-filter">
+                    <label>Division</label>
+
+                    <select id="marksDivision">
+                        <option value="all">All Divisions</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                    </select>
+                </div>
+
+
+                <div class="marks-filter">
+                    <label>Assessment</label>
+
+                    <select id="marksAssessment">
+                        <option value="all">All Assessments</option>
+                        <option value="ISE-1">ISE-1</option>
+                        <option value="ISE-2">ISE-2</option>
+                        <option value="Assignment">Assignment</option>
+                        <option value="ESE">ESE</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY CARDS -->
+            <div class="teacher-stat-cards marks-summary">
+
+                <div class="teacher-stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <span>Total Students</span>
+                        <h3>45</h3>
+                    </div>
+                </div>
+
+
+                <div class="teacher-stat-card">
+                    <div class="stat-icon teal">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+
+                    <div>
+                        <span>Class Average</span>
+                        <h3>78.6%</h3>
+                    </div>
+                </div>
+
+
+                <div class="teacher-stat-card">
+                    <div class="stat-icon pink">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </div>
+
+                    <div>
+                        <span>Highest Marks</span>
+                        <h3>96%</h3>
+                    </div>
+                </div>
+
+
+                <div class="teacher-stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <div>
+                        <span>Needs Review</span>
+                        <h3>5</h3>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- MARKS TABLE -->
+            <div class="marks-table-card">
+
+                <div class="table-heading">
+
+                    <div>
+                        <h3>Student Marks</h3>
+                        <p>Academic performance records</p>
+                    </div>
+
+                    <button class="export-btn">
+                        <i class="fa-solid fa-download"></i>
+                        Export
+                    </button>
+
+                </div>
+
+
+                <div class="marks-table-wrapper">
+
+                    <table class="marks-table">
+
+                        <thead>
+                            <tr>
+                                <th>Roll No.</th>
+                                <th>Student</th>
+                                <th>Division</th>
+                                <th>ISE-1</th>
+                                <th>ISE-2</th>
+                                <th>Assignment</th>
+                                <th>Total</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr data-division="A">
+
+                                <td>01</td>
+
+                                <td>
+                                    <div class="marks-student">
+
+                                        <div class="mini-avatar purple-avatar">
+                                            RS
+                                        </div>
+
+                                        <div>
+                                            <strong>Rahul Sharma</strong>
+                                            <span>TCET24001</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>A</td>
+                                <td>18/20</td>
+                                <td>19/20</td>
+                                <td>9/10</td>
+                                <td><strong>46/50</strong></td>
+
+                                <td>
+                                    <span class="grade-badge">A+</span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge good">
+                                        Excellent
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="edit-mark-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-division="A">
+
+                                <td>02</td>
+
+                                <td>
+                                    <div class="marks-student">
+
+                                        <div class="mini-avatar teal-avatar">
+                                            AP
+                                        </div>
+
+                                        <div>
+                                            <strong>Ananya Patil</strong>
+                                            <span>TCET24002</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>A</td>
+                                <td>17/20</td>
+                                <td>18/20</td>
+                                <td>9/10</td>
+                                <td><strong>44/50</strong></td>
+
+                                <td>
+                                    <span class="grade-badge">A</span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge good">
+                                        Good
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="edit-mark-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-division="B">
+
+                                <td>03</td>
+
+                                <td>
+                                    <div class="marks-student">
+
+                                        <div class="mini-avatar pink-avatar">
+                                            RS
+                                        </div>
+
+                                        <div>
+                                            <strong>Rohan Shah</strong>
+                                            <span>TCET24003</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>B</td>
+                                <td>15/20</td>
+                                <td>16/20</td>
+                                <td>8/10</td>
+                                <td><strong>39/50</strong></td>
+
+                                <td>
+                                    <span class="grade-badge">B+</span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge average">
+                                        Average
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="edit-mark-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-division="A">
+
+                                <td>04</td>
+
+                                <td>
+                                    <div class="marks-student">
+
+                                        <div class="mini-avatar purple-avatar">
+                                            SK
+                                        </div>
+
+                                        <div>
+                                            <strong>Shreya Kulkarni</strong>
+                                            <span>TCET24004</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>A</td>
+                                <td>12/20</td>
+                                <td>14/20</td>
+                                <td>7/10</td>
+                                <td><strong>33/50</strong></td>
+
+                                <td>
+                                    <span class="grade-badge">B</span>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge review">
+                                        Review
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="edit-mark-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

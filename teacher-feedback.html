@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback & Remarks | GradeLens</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="teacher-portal">
+
+    <!-- SIDEBAR -->
+    <aside class="teacher-sidebar">
+
+        <div class="teacher-brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>GradeLens</h2>
+                <span>Faculty Portal</span>
+            </div>
+        </div>
+
+        <nav class="teacher-nav">
+
+            <a href="teacher.html" class="teacher-nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="teacher-students.html" class="teacher-nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="teacher-marks.html" class="teacher-nav-item">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Marks</span>
+            </a>
+
+            <a href="teacher-attendance.html" class="teacher-nav-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="teacher-performance.html" class="teacher-nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Performance Analytics</span>
+            </a>
+
+            <a href="teacher-feedback.html" class="teacher-nav-item active">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>Feedback & Remarks</span>
+            </a>
+
+            <a href="teacher-settings.html" class="teacher-nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>Teach with Insight</p>
+            <span>Lead with Impact</span>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="teacher-main">
+
+        <!-- TOPBAR -->
+        <header class="teacher-topbar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search students...">
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="dark-mode-btn" id="darkModeBtn">
+                    <i class="fa-regular fa-moon" id="themeIcon"></i>
+                    <span id="themeLabel">Dark Mode</span>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <div class="teacher-profile">
+                    <div class="profile-avatar">AS</div>
+
+                    <div>
+                        <strong>Arjun Sharma</strong>
+                        <span>Computer Engineering</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- FEEDBACK PAGE -->
+        <section class="teacher-dashboard feedback-page">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Feedback & Remarks</h1>
+                    <p>Provide meaningful feedback on student progress</p>
+                </div>
+
+                <button class="primary-action-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Feedback
+                </button>
+
+            </div>
+
+
+            <!-- FILTERS -->
+            <div class="marks-filters">
+
+                <div class="marks-filter">
+                    <label>Subject</label>
+
+                    <select>
+                        <option>All Subjects</option>
+                        <option>UHV-II</option>
+                        <option>Maths-III</option>
+                        <option>DLDCA</option>
+                        <option>DBMS</option>
+                        <option>DSUJ</option>
+                    </select>
+                </div>
+
+                <div class="marks-filter">
+                    <label>Division</label>
+
+                    <select>
+                        <option>All Divisions</option>
+                        <option>A</option>
+                        <option>B</option>
+                    </select>
+                </div>
+
+                <div class="marks-filter">
+                    <label>Feedback Type</label>
+
+                    <select>
+                        <option>All Feedback</option>
+                        <option>Academic</option>
+                        <option>Attendance</option>
+                        <option>Participation</option>
+                        <option>General</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY CARDS -->
+            <div class="teacher-stat-cards feedback-summary">
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div>
+                        <span>Total Remarks</span>
+                        <h3>38</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon teal">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Positive Feedback</span>
+                        <h3>24</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon pink">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>Follow-ups</span>
+                        <h3>8</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>Students Reviewed</span>
+                        <h3>32</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEEDBACK CARDS -->
+            <div class="feedback-list">
+
+
+                <!-- FEEDBACK 1 -->
+
+                <div class="feedback-card">
+
+                    <div class="feedback-card-header">
+
+                        <div class="marks-student">
+
+                            <div class="mini-avatar purple-avatar">
+                                RS
+                            </div>
+
+                            <div>
+                                <strong>Rahul Sharma</strong>
+                                <span>Roll No. 01 · Division A</span>
+                            </div>
+
+                        </div>
+
+                        <span class="feedback-type academic">
+                            Academic
+                        </span>
+
+                    </div>
+
+
+                    <div class="feedback-meta">
+
+                        <span>
+                            <i class="fa-solid fa-book"></i>
+                            DBMS
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Today
+                        </span>
+
+                    </div>
+
+
+                    <p class="feedback-text">
+                        Demonstrates strong understanding of database concepts
+                        and consistently performs well in practical activities.
+                    </p>
+
+
+                    <div class="feedback-card-footer">
+
+                        <span class="feedback-status positive">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Positive
+                        </span>
+
+                        <button class="feedback-action">
+                            Edit
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEEDBACK 2 -->
+
+                <div class="feedback-card">
+
+                    <div class="feedback-card-header">
+
+                        <div class="marks-student">
+
+                            <div class="mini-avatar teal-avatar">
+                                AP
+                            </div>
+
+                            <div>
+                                <strong>Ananya Patil</strong>
+                                <span>Roll No. 02 · Division A</span>
+                            </div>
+
+                        </div>
+
+                        <span class="feedback-type participation">
+                            Participation
+                        </span>
+
+                    </div>
+
+
+                    <div class="feedback-meta">
+
+                        <span>
+                            <i class="fa-solid fa-book"></i>
+                            DSUJ
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            Yesterday
+                        </span>
+
+                    </div>
+
+
+                    <p class="feedback-text">
+                        Actively participates in classroom discussions and
+                        shows good problem-solving ability during practical work.
+                    </p>
+
+
+                    <div class="feedback-card-footer">
+
+                        <span class="feedback-status positive">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Positive
+                        </span>
+
+                        <button class="feedback-action">
+                            Edit
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEEDBACK 3 -->
+
+                <div class="feedback-card">
+
+                    <div class="feedback-card-header">
+
+                        <div class="marks-student">
+
+                            <div class="mini-avatar pink-avatar">
+                                RS
+                            </div>
+
+                            <div>
+                                <strong>Rohan Shah</strong>
+                                <span>Roll No. 03 · Division B</span>
+                            </div>
+
+                        </div>
+
+                        <span class="feedback-type attendance">
+                            Attendance
+                        </span>
+
+                    </div>
+
+
+                    <div class="feedback-meta">
+
+                        <span>
+                            <i class="fa-solid fa-book"></i>
+                            DLDCA
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            2 days ago
+                        </span>
+
+                    </div>
+
+
+                    <p class="feedback-text">
+                        Attendance has improved recently, but regular classroom
+                        participation is recommended for better understanding.
+                    </p>
+
+
+                    <div class="feedback-card-footer">
+
+                        <span class="feedback-status followup">
+                            <i class="fa-solid fa-clock"></i>
+                            Follow-up
+                        </span>
+
+                        <button class="feedback-action">
+                            Edit
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FEEDBACK 4 -->
+
+                <div class="feedback-card">
+
+                    <div class="feedback-card-header">
+
+                        <div class="marks-student">
+
+                            <div class="mini-avatar purple-avatar">
+                                SK
+                            </div>
+
+                            <div>
+                                <strong>Shreya Kulkarni</strong>
+                                <span>Roll No. 04 · Division A</span>
+                            </div>
+
+                        </div>
+
+                        <span class="feedback-type academic">
+                            Academic
+                        </span>
+
+                    </div>
+
+
+                    <div class="feedback-meta">
+
+                        <span>
+                            <i class="fa-solid fa-book"></i>
+                            Maths-III
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            3 days ago
+                        </span>
+
+                    </div>
+
+
+                    <p class="feedback-text">
+                        Additional practice is recommended for improving
+                        problem-solving accuracy and confidence in mathematics.
+                    </p>
+
+
+                    <div class="feedback-card-footer">
+
+                        <span class="feedback-status followup">
+                            <i class="fa-solid fa-clock"></i>
+                            Follow-up
+                        </span>
+
+                        <button class="feedback-action">
+                            Edit
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Performance Analytics | GradeLens</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="teacher-portal">
+
+    <!-- SIDEBAR -->
+    <aside class="teacher-sidebar">
+
+        <div class="teacher-brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>GradeLens</h2>
+                <span>Faculty Portal</span>
+            </div>
+        </div>
+
+
+        <nav class="teacher-nav">
+
+            <a href="teacher.html" class="teacher-nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="teacher-students.html" class="teacher-nav-item">
+                <i class="fa-solid fa-users"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="teacher-marks.html" class="teacher-nav-item">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Marks</span>
+            </a>
+
+            <a href="teacher-attendance.html" class="teacher-nav-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="teacher-performance.html" class="teacher-nav-item active">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Performance Analytics</span>
+            </a>
+
+            <a href="teacher-feedback.html" class="teacher-nav-item">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>Feedback & Remarks</span>
+            </a>
+            
+            <a href="teacher-settings.html" class="teacher-nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+            <p>Teach with Insight</p>
+            <span>Lead with Impact</span>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="teacher-main">
+
+        <!-- TOPBAR -->
+        <header class="teacher-topbar">
+
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search students...">
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="dark-mode-btn" id="darkModeBtn">
+                    <i class="fa-regular fa-moon" id="themeIcon"></i>
+                    <span id="themeLabel">Dark Mode</span>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <div class="teacher-profile">
+                    <div class="profile-avatar">AS</div>
+
+                    <div>
+                        <strong>Arjun Sharma</strong>
+                        <span>Computer Engineering</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PERFORMANCE ANALYTICS -->
+        <section class="teacher-dashboard performance-page">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Performance Analytics</h1>
+                    <p>Analyze student performance across subjects</p>
+                </div>
+
+            </div>
+
+
+            <!-- FILTERS -->
+            <div class="marks-filters">
+
+                <div class="marks-filter">
+                    <label>Subject</label>
+
+                    <select id="performanceSubject">
+                        <option>All Subjects</option>
+                        <option>UHV-II</option>
+                        <option>Maths-III</option>
+                        <option>DLDCA</option>
+                        <option>DBMS</option>
+                        <option>DSUJ</option>
+                    </select>
+                </div>
+
+
+                <div class="marks-filter">
+                    <label>Division</label>
+
+                    <select>
+                        <option>All Divisions</option>
+                        <option>A</option>
+                        <option>B</option>
+                    </select>
+                </div>
+
+
+                <div class="marks-filter">
+                    <label>Academic Period</label>
+
+                    <select>
+                        <option>Current Semester</option>
+                        <option>ISE-1</option>
+                        <option>ISE-2</option>
+                        <option>ESE</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+            <div class="teacher-stat-cards performance-summary">
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+
+                    <div>
+                        <span>Overall Average</span>
+                        <h3>78.6%</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon teal">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <div>
+                        <span>Highest Average</span>
+                        <h3>85%</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon pink">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+
+                    <div>
+                        <span>Performing Well</span>
+                        <h3>32</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon orange">
+                        <i class="fa-solid fa-user-clock"></i>
+                    </div>
+
+                    <div>
+                        <span>Needs Attention</span>
+                        <h3>8</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHARTS -->
+            <div class="performance-chart-grid">
+
+
+                <!-- SUBJECT PERFORMANCE -->
+
+                <div class="analytics-card">
+
+                    <h3>Subject-wise Performance</h3>
+
+                    <p>
+                        Average marks across all subjects
+                    </p>
+
+                    <div class="performance-chart-container">
+                        <canvas id="subjectPerformanceChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <!-- GRADE DISTRIBUTION -->
+
+                <div class="analytics-card">
+
+                    <h3>Grade Distribution</h3>
+
+                    <p>
+                        Distribution of grades among students
+                    </p>
+
+                    <div class="performance-chart-container">
+                        <canvas id="gradeDistributionChart"></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SECOND CHART -->
+
+            <div class="performance-full-card">
+
+                <div class="analytics-card">
+
+                    <h3>Attendance vs Performance</h3>
+
+                    <p>
+                        Relationship between attendance and academic performance
+                    </p>
+
+                    <div class="performance-large-chart">
+                        <canvas id="attendancePerformanceChart"></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENTS NEEDING ATTENTION -->
+
+            <div class="marks-table-card performance-students-card">
+
+                <div class="table-heading">
+
+                    <div>
+                        <h3>Students Needing Attention</h3>
+                        <p>
+                            Students with comparatively lower performance
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="marks-table-wrapper">
+
+                    <table class="marks-table">
+
+                        <thead>
+                            <tr>
+                                <th>Roll No.</th>
+                                <th>Student</th>
+                                <th>Division</th>
+                                <th>Average</th>
+                                <th>Attendance</th>
+                                <th>Concern</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>04</td>
+
+                                <td>
+                                    <div class="marks-student">
+
+                                        <div class="mini-avatar purple-avatar">
+                                            SK
+                                        </div>
+
+                                        <div>
+                                            <strong>Shreya Kulkarni</strong>
+                                            <span>TCET24004</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>A</td>
+
+                                <td>
+                                    <strong>62%</strong>
+                                </td>
+
+                                <td>
+                                    75.6%
+                                </td>
+
+                                <td>
+                                    <span class="status-badge review">
+                                        Low Attendance
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="edit-mark-btn">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>15</td>
+
+                                <td>
+                                    <div class="marks-student">
+
+                                        <div class="mini-avatar teal-avatar">
+                                            AM
+                                        </div>
+
+                                        <div>
+                                            <strong>Aditya Mehta</strong>
+                                            <span>TCET24015</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>B</td>
+
+                                <td>
+                                    <strong>65%</strong>
+                                </td>
+
+                                <td>
+                                    82.1%
+                                </td>
+
+                                <td>
+                                    <span class="status-badge average">
+                                        Academic
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="edit-mark-btn">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>21</td>
+
+                                <td>
+                                    <div class="marks-student">
+
+                                        <div class="mini-avatar pink-avatar">
+                                            NP
+                                        </div>
+
+                                        <div>
+                                            <strong>Neha Patil</strong>
+                                            <span>TCET24021</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>A</td>
+
+                                <td>
+                                    <strong>68%</strong>
+                                </td>
+
+                                <td>
+                                    79.4%
+                                </td>
+
+                                <td>
+                                    <span class="status-badge average">
+                                        Academic
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="edit-mark-btn">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+<!-- PERFORMANCE CHARTS -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const textColor =
+        document.body.classList.contains("dark-mode")
+            ? "#cbd5e1"
+            : "#64748b";
+
+
+    /* SUBJECT PERFORMANCE */
+
+    const subjectCanvas =
+        document.getElementById("subjectPerformanceChart");
+
+    if (subjectCanvas) {
+
+        new Chart(subjectCanvas, {
+
+            type: "bar",
+
+            data: {
+
+                labels: [
+                    "UHV-II",
+                    "Maths-III",
+                    "DLDCA",
+                    "DBMS",
+                    "DSUJ"
+                ],
+
+                datasets: [{
+                    label: "Average %",
+                    data: [78, 82, 74, 85, 79],
+                    borderRadius: 7
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+
+                scales: {
+
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            color: textColor
+                        }
+                    },
+
+                    x: {
+                        ticks: {
+                            color: textColor
+                        }
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* GRADE DISTRIBUTION */
+
+    const gradeCanvas =
+        document.getElementById("gradeDistributionChart");
+
+    if (gradeCanvas) {
+
+        new Chart(gradeCanvas, {
+
+            type: "doughnut",
+
+            data: {
+
+                labels: [
+                    "A+",
+                    "A",
+                    "B+",
+                    "B",
+                    "C"
+                ],
+
+                datasets: [{
+
+                    data: [
+                        8,
+                        15,
+                        12,
+                        7,
+                        3
+                    ]
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                plugins: {
+
+                    legend: {
+                        position: "bottom",
+                        labels: {
+                            color: textColor
+                        }
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* ATTENDANCE VS PERFORMANCE */
+
+    const attendanceCanvas =
+        document.getElementById("attendancePerformanceChart");
+
+    if (attendanceCanvas) {
+
+        new Chart(attendanceCanvas, {
+
+            type: "scatter",
+
+            data: {
+
+                datasets: [{
+
+                    label: "Students",
+
+                    data: [
+                        {x: 72, y: 58},
+                        {x: 76, y: 62},
+                        {x: 80, y: 67},
+                        {x: 83, y: 71},
+                        {x: 86, y: 74},
+                        {x: 89, y: 79},
+                        {x: 92, y: 84},
+                        {x: 95, y: 89},
+                        {x: 97, y: 93}
+                    ],
+
+                    pointRadius: 6
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                scales: {
+
+                    x: {
+                        title: {
+                            display: true,
+                            text: "Attendance %",
+                            color: textColor
+                        },
+                        min: 60,
+                        max: 100,
+                        ticks: {
+                            color: textColor
+                        }
+                    },
+
+                    y: {
+                        title: {
+                            display: true,
+                            text: "Performance %",
+                            color: textColor
+                        },
+                        min: 40,
+                        max: 100,
+                        ticks: {
+                            color: textColor
+                        }
+                    }
+
+                },
+
+                plugins: {
+
+                    legend: {
+                        display: false
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

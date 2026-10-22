@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings - GradeLens</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div class="teacher-portal">
+    <!-- ==========================================
+         SIDEBAR
+         ========================================== -->
+
+    <aside class="teacher-sidebar">
+
+        <div class="teacher-brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>GradeLens</h2>
+                <span>Faculty Portal</span>
+            </div>
+
+        </div>
+
+
+        <nav class="teacher-nav">
+
+            <a href="teacher.html" class="teacher-nav-item">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="teacher-students.html"
+               class="teacher-nav-item active">
+                <i class="fa-solid fa-users"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="teacher-marks.html" class="teacher-nav-item">
+                <i class="fa-solid fa-file-pen"></i>
+                <span>Marks</span>
+            </a>
+
+            <a href="teacher-attendance.html" class="teacher-nav-item">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="teacher-analytics.html" class="teacher-nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Performance Analytics</span>
+            </a>
+
+            <a href="teacher-feedback.html" class="teacher-nav-item">
+                <i class="fa-regular fa-comment-dots"></i>
+                <span>Feedback & Remarks</span>
+            </a>
+
+            <a href="teacher-settings.html" class="teacher-nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>Teach with Insight</strong>
+            <span>Lead with Impact</span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="teacher-main">
+
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="teacher-topbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search students..."
+                >
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="dark-mode-btn" id="darkModeBtn">
+
+                    <i
+                        class="fa-regular fa-moon"
+                        id="themeIcon"
+                    ></i>
+
+                    <span id="themeLabel">
+                        Dark Mode
+                    </span>
+
+                </button>
+
+
+                <button class="notification-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+
+                <div class="teacher-profile">
+
+                    <div class="profile-avatar">
+                        AS
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Arjun Sharma
+                        </strong>
+
+                        <span>
+                            Computer Engineering
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Settings -->
+        <section class="teacher-dashboard settings-page">
+
+            <div class="page-heading">
+                <div>
+                    <h1>Settings</h1>
+                    <p>Manage your profile and portal preferences.</p>
+                </div>
+            </div>
+
+
+            <!-- Profile Settings -->
+            <div class="settings-card">
+
+                <div class="settings-card-heading">
+                    <div>
+                        <h2>Profile Information</h2>
+                        <p>Update your basic faculty information.</p>
+                    </div>
+                </div>
+
+                <div class="settings-form-grid">
+
+                    <div class="settings-field">
+                        <label>Full Name</label>
+                        <input type="text" value="Arjun Sharma">
+                    </div>
+
+                    <div class="settings-field">
+                        <label>Email Address</label>
+                        <input type="email" value="teacher@gradelens.edu">
+                    </div>
+
+                    <div class="settings-field">
+                        <label>Employee ID</label>
+                        <input type="text" value="FAC001" disabled>
+                    </div>
+
+                    <div class="settings-field">
+                        <label>Department</label>
+                        <input type="text" value="Computer Engineering">
+                    </div>
+
+                </div>
+
+                <button class="primary-action-btn settings-save">
+                    Save Changes
+                </button>
+
+            </div>
+
+
+            <!-- Academic Preferences -->
+            <div class="settings-card">
+
+                <div class="settings-card-heading">
+                    <div>
+                        <h2>Academic Preferences</h2>
+                        <p>Set your default academic portal preferences.</p>
+                    </div>
+                </div>
+
+                <div class="settings-form-grid">
+
+                    <div class="settings-field">
+                        <label>Academic Year</label>
+                        <select>
+                            <option selected>2026-27</option>
+                            <option>2025-26</option>
+                        </select>
+                    </div>
+
+                    <div class="settings-field">
+                        <label>Default Division</label>
+                        <select>
+                            <option selected>All Divisions</option>
+                            <option>Division A</option>
+                            <option>Division B</option>
+                        </select>
+                    </div>
+
+                    <div class="settings-field">
+                        <label>Default Subject</label>
+                        <select>
+                            <option selected>All Subjects</option>
+                            <option>UHV-II</option>
+                            <option>Maths-III</option>
+                            <option>DLDCA</option>
+                            <option>DBMS</option>
+                            <option>DSUJ</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Notifications -->
+            <div class="settings-card">
+
+                <div class="settings-card-heading">
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Choose which portal notifications you want to receive.</p>
+                    </div>
+                </div>
+
+                <div class="settings-option">
+                    <div>
+                        <strong>Attendance Alerts</strong>
+                        <p>Receive alerts for students with low attendance.</p>
+                    </div>
+
+                    <label class="settings-switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="settings-option">
+                    <div>
+                        <strong>Performance Alerts</strong>
+                        <p>Receive alerts when students need academic attention.</p>
+                    </div>
+
+                    <label class="settings-switch">
+                        <input type="checkbox" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="settings-option">
+                    <div>
+                        <strong>Feedback Reminders</strong>
+                        <p>Receive reminders for pending student remarks.</p>
+                    </div>
+
+                    <label class="settings-switch">
+                        <input type="checkbox">
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

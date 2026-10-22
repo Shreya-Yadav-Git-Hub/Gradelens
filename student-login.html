@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GradeLens | Student Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="welcome-container">
+
+        <div class="brand">
+            <h1>GradeLens</h1>
+            <p>Student Performance Analytics System</p>
+        </div>
+
+
+        <div class="login-box">
+
+            <h2>Student Login</h2>
+
+            <p>Login to access your academic portal</p>
+
+
+            <form id="studentLoginForm">
+
+                <label for="studentEmail">
+                    Email / Username
+                </label>
+
+                <input
+                    type="text"
+                    id="studentEmail"
+                    placeholder="Enter your email or username"
+                    // method post action specify the url to direct it with 
+                    required
+                >
+
+
+                <label for="studentPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="studentPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+
+            <p class="signup-text">
+
+                Don't have an account?
+
+                <a href="student-signup.html">
+                    Sign Up
+                </a>
+
+            </p>
+
+        </div>
+
+
+        <p class="footer-text">
+            &copy; 2026 GradeLens
+        </p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

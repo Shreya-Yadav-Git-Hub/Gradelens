@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GradeLens | Students</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="teacher-portal">
+
+    <!-- ==========================================
+         SIDEBAR
+         ========================================== -->
+
+    <aside class="teacher-sidebar">
+
+        <div class="teacher-brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h2>GradeLens</h2>
+                <span>Faculty Portal</span>
+            </div>
+
+        </div>
+
+
+        <nav class="teacher-nav">
+
+            <a href="teacher.html" class="teacher-nav-item">
+                <i class="fa-solid fa-table-columns"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="teacher-students.html"
+               class="teacher-nav-item active">
+                <i class="fa-solid fa-users"></i>
+                <span>Students</span>
+            </a>
+
+            <a href="teacher-marks.html" class="teacher-nav-item">
+                <i class="fa-solid fa-file-pen"></i>
+                <span>Marks</span>
+            </a>
+
+            <a href="teacher-attendance.html" class="teacher-nav-item">
+                <i class="fa-regular fa-calendar-check"></i>
+                <span>Attendance</span>
+            </a>
+
+            <a href="teacher-analytics.html" class="teacher-nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Performance Analytics</span>
+            </a>
+
+            <a href="teacher-feedback.html" class="teacher-nav-item">
+                <i class="fa-regular fa-comment-dots"></i>
+                <span>Feedback & Remarks</span>
+            </a>
+
+            <a href="teacher-settings.html" class="teacher-nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <strong>Teach with Insight</strong>
+            <span>Lead with Impact</span>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+
+    <main class="teacher-main">
+
+        <!-- TOPBAR -->
+
+        <header class="teacher-topbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="studentSearch"
+                    placeholder="Search students, roll no, subjects..."
+                >
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button class="dark-mode-btn" id="darkModeBtn">
+                    <i class="fa-regular fa-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+
+                <button class="notification-btn">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+
+                <div class="teacher-profile">
+
+                    <div class="profile-avatar">
+                        AS
+                    </div>
+
+                    <div>
+                        <strong>Arjun Sharma</strong>
+                        <span>Computer Engineering</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==========================================
+             STUDENTS PAGE
+             ========================================== -->
+
+        <section class="teacher-dashboard students-page">
+
+            <div class="page-heading">
+
+                <div>
+                    <h1>Students</h1>
+
+                    <p>
+                        View and monitor student academic performance.
+                    </p>
+                </div>
+
+                <button class="primary-action-btn">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Add Student
+                </button>
+
+            </div>
+
+
+            <!-- SUMMARY -->
+
+            <div class="teacher-stat-cards student-summary">
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon purple">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <span>Total Students</span>
+
+                    <h2>45</h2>
+
+                    <p>Across active divisions</p>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon teal">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+
+                    <span>Active Students</span>
+
+                    <h2>42</h2>
+
+                    <p>Currently enrolled</p>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon pink">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <span>Class Average</span>
+
+                    <h2>78.6%</h2>
+
+                    <p>Current academic average</p>
+
+                </div>
+
+
+                <div class="teacher-stat-card">
+
+                    <div class="stat-icon yellow">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <span>Avg. Attendance</span>
+
+                    <h2>91.2%</h2>
+
+                    <p>Overall attendance</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STUDENT TABLE -->
+
+            <div class="students-table-card">
+
+                <div class="table-header">
+
+                    <div>
+                        <h3>Student List</h3>
+
+                        <p>
+                            45 students in your assigned divisions
+                        </p>
+                    </div>
+
+
+                    <div class="table-filters">
+
+                        <select id="divisionFilter">
+
+                            <option value="all">
+                                All Divisions
+                            </option>
+
+                            <option value="SE-A">
+                                SE-A
+                            </option>
+
+                            <option value="SE-B">
+                                SE-B
+                            </option>
+
+                        </select>
+
+
+                        <select id="statusFilter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="good">
+                                Good
+                            </option>
+
+                            <option value="attention">
+                                Needs Attention
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="students-table-wrapper">
+
+                    <table class="students-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Roll No.</th>
+                                <th>Student</th>
+                                <th>Division</th>
+                                <th>Attendance</th>
+                                <th>Average</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="studentTableBody">
+
+                            <tr data-division="SE-A"
+                                data-status="good">
+
+                                <td>01</td>
+
+                                <td>
+                                    <div class="student-name">
+                                        <div class="student-avatar">
+                                            RS
+                                        </div>
+
+                                        <div>
+                                            <strong>Rahul Sharma</strong>
+                                            <span>Roll No. 01</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>SE-A</td>
+
+                                <td>
+                                    <span class="attendance-good">
+                                        94%
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <strong>82%</strong>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge good">
+                                        Good
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-division="SE-A"
+                                data-status="good">
+
+                                <td>02</td>
+
+                                <td>
+                                    <div class="student-name">
+
+                                        <div class="student-avatar">
+                                            AP
+                                        </div>
+
+                                        <div>
+                                            <strong>Ananya Patil</strong>
+                                            <span>Roll No. 02</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>SE-A</td>
+
+                                <td>
+                                    <span class="attendance-good">
+                                        96%
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <strong>88%</strong>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge good">
+                                        Good
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-division="SE-B"
+                                data-status="attention">
+
+                                <td>23</td>
+
+                                <td>
+                                    <div class="student-name">
+
+                                        <div class="student-avatar">
+                                            RS
+                                        </div>
+
+                                        <div>
+                                            <strong>Rohan Shah</strong>
+                                            <span>Roll No. 23</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>SE-B</td>
+
+                                <td>
+                                    <span class="attendance-warning">
+                                        76%
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <strong>68%</strong>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge attention">
+                                        Needs Attention
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-division="SE-B"
+                                data-status="good">
+
+                                <td>31</td>
+
+                                <td>
+                                    <div class="student-name">
+
+                                        <div class="student-avatar">
+                                            SK
+                                        </div>
+
+                                        <div>
+                                            <strong>Shreya Kulkarni</strong>
+                                            <span>Roll No. 31</span>
+                                        </div>
+
+                                    </div>
+                                </td>
+
+                                <td>SE-B</td>
+
+                                <td>
+                                    <span class="attendance-good">
+                                        92%
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <strong>81%</strong>
+                                </td>
+
+                                <td>
+                                    <span class="status-badge good">
+                                        Good
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <button class="view-btn">
+                                        View
+                                    </button>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+/* ==========================================
+   STUDENT SEARCH
+   ========================================== */
+
+const searchInput = document.getElementById("studentSearch");
+
+const divisionFilter =
+    document.getElementById("divisionFilter");
+
+const statusFilter =
+    document.getElementById("statusFilter");
+
+const studentRows =
+    document.querySelectorAll("#studentTableBody tr");
+
+
+function filterStudents() {
+
+    const searchValue =
+        searchInput.value.toLowerCase();
+
+    const divisionValue =
+        divisionFilter.value;
+
+    const statusValue =
+        statusFilter.value;
+
+
+    studentRows.forEach(row => {
+
+        const rowText =
+            row.textContent.toLowerCase();
+
+        const rowDivision =
+            row.dataset.division;
+
+        const rowStatus =
+            row.dataset.status;
+
+
+        const matchesSearch =
+            rowText.includes(searchValue);
+
+        const matchesDivision =
+            divisionValue === "all" ||
+            rowDivision === divisionValue;
+
+        const matchesStatus =
+            statusValue === "all" ||
+            rowStatus === statusValue;
+
+
+        if (
+            matchesSearch &&
+            matchesDivision &&
+            matchesStatus
+        ) {
+
+            row.style.display = "";
+
+        } else {
+
+            row.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+searchInput.addEventListener(
+    "input",
+    filterStudents
+);
+
+divisionFilter.addEventListener(
+    "change",
+    filterStudents
+);
+
+statusFilter.addEventListener(
+    "change",
+    filterStudents
+);
+
+</script>
+
+</body>
+</html>
